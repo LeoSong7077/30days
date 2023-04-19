@@ -18,8 +18,8 @@ module.exports = function () {};
 
 //     const googleCredentials = {
 //         "web": {
-//             "client_id": "761003588734-pkbf7ggc4mjpeomff9h4r7vitn48499p.apps.googleusercontent.com",
-//             "client_secret": "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",
+//             "client_id": process.env.GOOGLE_CLIENT_ID,
+//             "client_secret": process.env.GOOGLE_CLIENT_SECRET,
 //             "redirect_uris": [
 //                 "http://localhost:9121/login/google/signin",
 //                 // "https://seed.hillstone.finance/login/google/signin"

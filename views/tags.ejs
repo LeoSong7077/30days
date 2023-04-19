@@ -3,7 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Example Layout</title>
+        <title>30days</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet" />
         <style>
             body {
                 margin: 0;
@@ -17,7 +20,8 @@
                 text-align: center;
             }
             h1 {
-                text-align: left;
+                font-family: "Caveat", cursive;
+                font-size: 52px;
             }
             nav {
                 background-color: #333;
@@ -34,27 +38,46 @@
             }
             main {
                 display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* justify-content: center; */
+            }
+            .main-container {
+                display: flex;
                 flex-direction: row;
                 /* align-items: center; */
                 /* padding: 20px; */
-                min-height: 800px;
+                /* min-height: 1000px; */
+                width: 1400px;
+                border: 1px solid black;
             }
             aside {
-                flex-basis: 20%;
-                background-color: #ddd;
+                /* flex-basis: 50%; */
+                flex: 1.6;
                 /* padding: 10px; */
                 /* border-radius: 5px; */
             }
+            .aside-container {
+                margin: 40px;
+                padding: 20px;
+                background-color: #ddd;
+                /* border: 1px solid black; */
+                border-radius: 15px;
+                /* height: 100%; */
+            }
             section {
+                flex: 2.7;
                 display: flex;
                 flex-direction: column;
                 /* justify-content: space-between; */
                 /* align-items: flex-start; */
                 width: 100%;
+                height: 1200px;
+                overflow: scroll;
             }
             article {
                 /* flex-basis: 80%; */
-                margin: 20px;
+                /* margin: 20px; */
             }
             footer {
                 background-color: #333;
@@ -64,6 +87,15 @@
             }
             ul {
                 list-style: none;
+            }
+            aside .title {
+                font-size: 21px;
+            }
+            section .title {
+                font-size: 41px;
+            }
+
+            .comments {
             }
         </style>
     </head>
@@ -80,53 +112,175 @@
             <a href="#">Mypage</a>
         </nav>
         <main>
-            <aside>
-                <h3>Tags</h3>
-                <span>search:</span><input type="text" />
-                <hr />
-                <ul>
-                    <li>#study</li>
-                    <li>#work out</li>
-                    <li>#getting up early</li>
-                </ul>
-            </aside>
-            <section>
-                <article>
-                    <h2>#study</h2>
-                    <div>rank:1</div>
-                    <div>number of participants:390</div>
-                    <div>comments:</div>
-                    <div style="border: 1px solid black; border-bottom: none">
-                        <div style="border-bottom: 1px solid black">
-                            <span>project code:<a href="#">139254</a></span>
-                            <br />
-                            <span>tags: #study #work out #getting up early</span>
-                            <br />
-                            <span>date:2023-04-17 19:07</span>
-                            <br />
-                            <span>comment: </span><span>Hang in there guys!!</span>
-                        </div>
-                        <div style="border-bottom: 1px solid black">
-                            <span>project code:<a href="#">219654</a></span>
-                            <br />
-                            <span>tags: #study #work out</span>
-                            <br />
-                            <span>date:2023-04-17 19:07</span>
-                            <br />
-                            <span>comment: </span><span>Cheer up!</span>
-                        </div>
-                        <div style="border-bottom: 1px solid black">
-                            <span>project code:<a href="#">112104</a></span>
-                            <br />
-                            <span>tags: #study #getting up early</span>
-                            <br />
-                            <span>date:2023-04-17 19:07</span>
-                            <br />
-                            <span>comment: </span><span>Just do it.</span>
-                        </div>
+            <div class="main-container">
+                <aside>
+                    <div class="aside-container">
+                        <h3 class="title">Tags</h3>
+                        <span>search</span><input type="text" />
+                        <hr />
+                        <ul>
+                            <li>#study</li>
+                            <li>#work out</li>
+                            <li>#getting up early</li>
+                        </ul>
                     </div>
-                </article>
-            </section>
+                </aside>
+                <section>
+                    <article>
+                        <h2 class="title">#study</h2>
+                        <div>rank:1</div>
+                        <div>number of participants:390</div>
+                        <br />
+                        <div>comments:</div>
+                        <div class="comments" style="border: 1px solid black; border-bottom: none">
+                            <div style="border-bottom: 1px solid black">
+                                <span>project code:<a href="#">139254</a></span>
+                                <br />
+                                <span>tags: #study #work out #getting up early</span>
+                                <br />
+                                <span>date:2023-04-17 19:07</span>
+                                <br />
+                                <span>comment: </span><span>Hang in there guys!!</span>
+                            </div>
+                            <div style="border-bottom: 1px solid black">
+                                <span>project code:<a href="#">219654</a></span>
+                                <br />
+                                <span>tags: #study #work out</span>
+                                <br />
+                                <span>date:2023-04-17 19:07</span>
+                                <br />
+                                <span>comment: </span><span>Cheer up!</span>
+                            </div>
+                            <div style="border-bottom: 1px solid black">
+                                <span>project code:<a href="#">112104</a></span>
+                                <br />
+                                <span>tags: #study #getting up early</span>
+                                <br />
+                                <span>date:2023-04-17 19:07</span>
+                                <br />
+                                <span>comment: </span><span>Just do it.</span>
+                            </div>
+                            <div style="border-bottom: 1px solid black">
+                                <span>project code:<a href="#">112104</a></span>
+                                <br />
+                                <span>tags: #study #getting up early</span>
+                                <br />
+                                <span>date:2023-04-17 19:07</span>
+                                <br />
+                                <span>comment: </span><span>Just do it.</span>
+                            </div>
+                            <div style="border-bottom: 1px solid black">
+                                <span>project code:<a href="#">112104</a></span>
+                                <br />
+                                <span>tags: #study #getting up early</span>
+                                <br />
+                                <span>date:2023-04-17 19:07</span>
+                                <br />
+                                <span>comment: </span><span>Just do it.</span>
+                            </div>
+                            <div style="border-bottom: 1px solid black">
+                                <span>project code:<a href="#">112104</a></span>
+                                <br />
+                                <span>tags: #study #getting up early</span>
+                                <br />
+                                <span>date:2023-04-17 19:07</span>
+                                <br />
+                                <span>comment: </span><span>Just do it.</span>
+                            </div>
+                            <div style="border-bottom: 1px solid black">
+                                <span>project code:<a href="#">112104</a></span>
+                                <br />
+                                <span>tags: #study #getting up early</span>
+                                <br />
+                                <span>date:2023-04-17 19:07</span>
+                                <br />
+                                <span>comment: </span><span>Just do it.</span>
+                            </div>
+                            <div style="border-bottom: 1px solid black">
+                                <span>project code:<a href="#">112104</a></span>
+                                <br />
+                                <span>tags: #study #getting up early</span>
+                                <br />
+                                <span>date:2023-04-17 19:07</span>
+                                <br />
+                                <span>comment: </span><span>Just do it.</span>
+                            </div>
+                            <div style="border-bottom: 1px solid black">
+                                <span>project code:<a href="#">112104</a></span>
+                                <br />
+                                <span>tags: #study #getting up early</span>
+                                <br />
+                                <span>date:2023-04-17 19:07</span>
+                                <br />
+                                <span>comment: </span><span>Just do it.</span>
+                            </div>
+                            <div style="border-bottom: 1px solid black">
+                                <span>project code:<a href="#">112104</a></span>
+                                <br />
+                                <span>tags: #study #getting up early</span>
+                                <br />
+                                <span>date:2023-04-17 19:07</span>
+                                <br />
+                                <span>comment: </span><span>Just do it.</span>
+                            </div>
+                            <div style="border-bottom: 1px solid black">
+                                <span>project code:<a href="#">112104</a></span>
+                                <br />
+                                <span>tags: #study #getting up early</span>
+                                <br />
+                                <span>date:2023-04-17 19:07</span>
+                                <br />
+                                <span>comment: </span><span>Just do it.</span>
+                            </div>
+                            <div style="border-bottom: 1px solid black">
+                                <span>project code:<a href="#">112104</a></span>
+                                <br />
+                                <span>tags: #study #getting up early</span>
+                                <br />
+                                <span>date:2023-04-17 19:07</span>
+                                <br />
+                                <span>comment: </span><span>Just do it.</span>
+                            </div>
+                            <div style="border-bottom: 1px solid black">
+                                <span>project code:<a href="#">112104</a></span>
+                                <br />
+                                <span>tags: #study #getting up early</span>
+                                <br />
+                                <span>date:2023-04-17 19:07</span>
+                                <br />
+                                <span>comment: </span><span>Just do it.</span>
+                            </div>
+                            <div style="border-bottom: 1px solid black">
+                                <span>project code:<a href="#">112104</a></span>
+                                <br />
+                                <span>tags: #study #getting up early</span>
+                                <br />
+                                <span>date:2023-04-17 19:07</span>
+                                <br />
+                                <span>comment: </span><span>Just do it.</span>
+                            </div>
+                            <div style="border-bottom: 1px solid black">
+                                <span>project code:<a href="#">112104</a></span>
+                                <br />
+                                <span>tags: #study #getting up early</span>
+                                <br />
+                                <span>date:2023-04-17 19:07</span>
+                                <br />
+                                <span>comment: </span><span>Just do it.</span>
+                            </div>
+                            <div style="border-bottom: 1px solid black">
+                                <span>project code:<a href="#">112104</a></span>
+                                <br />
+                                <span>tags: #study #getting up early</span>
+                                <br />
+                                <span>date:2023-04-17 19:07</span>
+                                <br />
+                                <span>comment: </span><span>Just do it.</span>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </div>
         </main>
         <footer>
             <p>&copy; 2023 ChatGPT. All rights reserved.</p>
